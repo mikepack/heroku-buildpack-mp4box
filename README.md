@@ -23,5 +23,5 @@ To use this buildpack, you should prepare .buildpacks file that contains this bu
 
 You can verify installing ffmpeg by following command.
 
-    $ heroku run "mp4box -version"
+    $ heroku run "MP4Box -version"
 
