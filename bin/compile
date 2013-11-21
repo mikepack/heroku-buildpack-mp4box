@@ -6,7 +6,7 @@ indent() {
 
 echo "-----> Install MP4Box (from static binary)"
 BUILD_DIR=$1
-VENDOR_DIR="vendor/mp4box/bin"
+VENDOR_DIR="vendor/mp4box"
 DOWNLOAD_URL="https://github.com/mikepack/heroku-buildpack-mp4box/raw/master/mp4box-0.5.1-dev.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
@@ -20,3 +20,4 @@ echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/mp4box.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/mp4box/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/mp4box/lib"' >> $PROFILE_PATH
