@@ -7,7 +7,7 @@ indent() {
 echo "-----> Install MP4Box (from static binary)"
 BUILD_DIR=$1
 VENDOR_DIR="vendor/mp4box/bin"
-DOWNLOAD_URL=""
+DOWNLOAD_URL="https://github.com/mikepack/heroku-buildpack-mp4box/raw/master/mp4box-0.5.1-dev.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
